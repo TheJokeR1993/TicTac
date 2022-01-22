@@ -1,0 +1,350 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 30px;
+}
+body{
+    background-color: rgb(248, 248, 248);
+    
+}
+.container_first {
+    z-index: 3;
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    background-color: rgb(248, 248, 248);
+}
+.first_inp{
+    z-index: 3;
+    padding: 50px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.first_inp input {
+    width: 50%;
+    margin-left: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+.first_inp input:nth-child(1){
+    margin-bottom: 30px;
+}
+.error{
+    background: rgba(252, 44, 44, 0.664);
+    text-align: center;
+    text-justify: center;
+    border-radius: 20px;
+    
+
+}
+
+.first_div_btn{
+    
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+}
+.first_div_btn button{
+    cursor: pointer;
+    width: 40%;
+}
+.container_game{
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    
+
+}
+.container_game a{
+    position: fixed;
+    top: 0;right: 0;
+    border:1px solid black;
+    background: rgb(253, 23, 23);
+    text-decoration: none;
+    padding: 0px 10px;
+    font-size: 20px;
+    color: black;
+    opacity: 0.6;
+}
+.container_game a:hover{
+    opacity: 1;
+}
+.start{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.player{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    width: 100%;
+    height:100px;
+    text-align: center;
+
+}
+.player p {
+    text-transform: uppercase;
+}
+.player_item{
+    height: 20vh;
+    width: 40vh;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+    color:rgba(5, 5, 5, 0.342);
+    max-width: 40%;
+}
+.player_item:hover{
+    border: 2px solid black;
+    border-radius:10px;
+}
+.player_item input{
+    width: 100%;
+    border:none;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px 0px;
+}
+.player_item h2{
+    width: 100%;
+    text-align: center;
+}
+
+.active{
+    padding: 5px;
+    border: 2px solid black;
+    border-radius:10px;
+    color: red;
+    box-shadow: 0px 0px 9px black;
+
+}
+
+.game{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    border:2px solid black;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px black;
+    position: relative;
+}
+.draw{
+    height: 100%;
+    
+    animation: draw 1s linear  ;
+}
+.draw h3{
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.draw img{
+    height: 90%;
+    width: 100%;
+    
+}
+.result{
+   
+  position: relative;
+   
+   padding: 10px;
+   top: 0;
+   width: 70%;
+   max-width: 600px;
+   height: 100%;
+   border-radius: 10px;
+   display: flex;
+   background: black;
+   color: rgb(0, 212, 0);
+   justify-content: center;
+   flex-direction: column;
+    text-transform: capitalize;
+    
+    animation: win 1s linear  ;
+}
+.result h2{
+    position: absolute;
+    top: -20px;left: 0;
+    background:black ;
+    width: 100%;
+    border-radius: 10px;
+}
+@keyframes win {
+    0%{
+        width:40%;
+        transform: translateY(120px);
+        opacity: 0;
+    }
+    
+    
+    100%{
+        width:70%;
+    }
+}
+@keyframes draw {
+    0%{
+        height: 200px;
+        transform: translateY(100px);
+        opacity: 0;
+    }
+}
+.result img{
+    width: 100%;
+    height: 80%;
+}
+.game_item{
+    border: 2px solid black;
+    font-size: 30px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.333%;
+    height: 33.333%;
+}
+.game_item:nth-child(1){
+    border-top-left-radius: 10px;
+    border-top: none;
+    border-left: none;
+}
+.game_item:nth-child(2){
+    border-top: none;
+    
+}
+.game_item:nth-child(3){
+    border-top-right-radius: 10px;
+    border-top: none;
+    border-right: none;
+}
+.game_item:nth-child(4){
+    border-left: none;
+}
+.game_item:nth-child(6){
+    border-right: none;
+}
+.game_item:nth-child(7){
+    border-bottom: none;
+    border-left: none;
+    border-bottom-left-radius: 10px;
+}
+.game_item:nth-child(8){
+    border-bottom: none;
+}
+.game_item:nth-child(9){
+    border-bottom: none;
+    border-right: none;
+    border-bottom-right-radius: 10px;
+}
+
+.game_item:hover{
+    border:4px solid black;
+    cursor: pointer;
+}
+
+.repeat{
+    cursor: pointer;
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 8, 248, 0.993);
+    opacity: 0.2;
+}
+.repeat img {
+    width: 100%;
+    height: 100%;
+}
+
+.back{
+    height: 35px;
+    
+}
+.back button{
+    font-size: 20px;
+    color: rgb(1, 0, 2);
+    background: rgb(250, 177, 177);
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+.win_statistics{
+    
+    color: blue;
+    font-size: 20px;
+}
+
+.container_selec{
+    
+    
+    position: absolute;
+    top: 0;left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    
+    
+}
+.div_complication{
+    background-color: rgb(248, 248, 248);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+   top: 0;
+   left: 0;
+   z-index: 2;
+   filter: blur(0);
+   transition: all .8s;
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.div_complication.active {
+    filter: blur(5px);
+    
+}
+
+.container_selec button {
+    margin:10px; 
+    text-transform: uppercase;
+    background: white;
+    font-size: 25px;
+    width: 50%;
+    cursor: pointer;
+}
+
+.container_selec button:hover{
+    color: white;
+    background: chartreuse;
+    box-shadow: 0px 0px 4px 4px rgb(109, 211, 7);
+    border: 2px solid rgba(0, 212, 0 , 0.2);
+}
+.container_selec button:nth-child(1){
+    background: red;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 0px 4px 1px black;
+    position: absolute;
+    top: 0;right: 0;
+    width: 40px;
+    height: 40px;
+    color: white;
+    
+}
