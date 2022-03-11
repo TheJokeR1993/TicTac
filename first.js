@@ -74,7 +74,7 @@ inp_2.addEventListener('click',e=>{
 
 function input_error(arg){
 
-    
+    console.log(arg);
     if(!arg.value){
         error.innerHTML = `<h3>Имя не может быть пустым</h3>`
        return error_or_not(true,arg)
@@ -84,7 +84,10 @@ function input_error(arg){
     } else if(+arg.value){
         error.innerHTML = `<h3>Имя не должно быть числом</h3>`
        return error_or_not(true,arg)
-    }else if(arg.value.match(reg)[0]!==arg.value.match(reg).input){
+    } else if(!reg.test(arg.value)){
+        error.innerHTML = `<h3>Используйте En язык</h3>`
+       return error_or_not(true,arg)
+    } else if(arg.value.match(reg)[0]!==arg.value.match(reg).input){
         +arg.value.match(reg).input[0]
         ? error.innerHTML = `<h3>Имя не может начинаться с цифры</h3>`
         : error.innerHTML = `<h3>Используйте En язык </h3>`
