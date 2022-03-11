@@ -73,7 +73,8 @@ inp_2.addEventListener('click',e=>{
 
 
 function input_error(arg){
- 
+
+    
     if(!arg.value){
         error.innerHTML = `<h3>Имя не может быть пустым</h3>`
        return error_or_not(true,arg)
@@ -82,6 +83,11 @@ function input_error(arg){
        return error_or_not(true,arg)
     } else if(+arg.value){
         error.innerHTML = `<h3>Имя не должно быть числом</h3>`
+       return error_or_not(true,arg)
+    }else if(arg.value.match(reg)[0]!==arg.value.match(reg).input){
+        +arg.value.match(reg).input[0]
+        ? error.innerHTML = `<h3>Имя не может начинаться с цифры</h3>`
+        : error.innerHTML = `<h3>Используйте En язык </h3>`
        return error_or_not(true,arg)
     } else if(arg.value.length>9){
         error.innerHTML = `<h3>Имя слишком длинное</h3>`
