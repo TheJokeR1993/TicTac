@@ -80,6 +80,9 @@ function input_error(arg){
     } else if(arg.value.length<3){
         error.innerHTML = `<h3>Имя слишком короткое</h3>`
        return error_or_not(true,arg)
+    } else if(+arg.value){
+        error.innerHTML = `<h3>Имя не должно быть числом</h3>`
+       return error_or_not(true,arg)
     } else if(arg.value.length>9){
         error.innerHTML = `<h3>Имя слишком длинное</h3>`
         return  error_or_not(true,arg)
