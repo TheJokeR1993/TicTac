@@ -348,3 +348,64 @@ body{
     color: white;
     
 }
+
+@media only screen and (max-width: 720px) {
+    .game{
+        width: 70%;
+    }
+  }
+
+  @media only screen and (max-width: 520px) {
+    .game{
+        width: 90%;
+    }
+  }
+
+
+
+/* 
+Skills
+Figma
+
+Library
+
+React
+Redux
+React-Router-dom
+LocalForage
+Axios
+Bootstrap
+Chart
+Props type
+i18next
+react-modal
+Regex
+lodash.debounce
+
+
+Knowledge
+CSS 
+JS
+html
+webpack (m)
+SaSS
+
+
+
+// must
+TS 
+
+
+NodeJS
+/
+
+1  experience  (опыт)    1 year last  9.01.22 //
+//DIGIS (Odessa)  - 
+https://train.fitness/
+1м
+
+рудд
+//
+
+
+*/

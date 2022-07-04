@@ -76,24 +76,24 @@ function input_error(arg){
 
     console.log(arg);
     if(!arg.value){
-        error.innerHTML = `<h3>Имя не может быть пустым</h3>`
+        error.innerHTML = `<h3>Name cannot be empty</h3>`
        return error_or_not(true,arg)
     } else if(arg.value.length<3){
-        error.innerHTML = `<h3>Имя слишком короткое</h3>`
+        error.innerHTML = `<h3>Name is too short</h3>`
        return error_or_not(true,arg)
     } else if(+arg.value){
-        error.innerHTML = `<h3>Имя не должно быть числом</h3>`
+        error.innerHTML = `<h3>Name must not be a number</h3>`
        return error_or_not(true,arg)
     } else if(!reg.test(arg.value)){
-        error.innerHTML = `<h3>Используйте En язык</h3>`
+        error.innerHTML = `<h3>Use English</h3>`
        return error_or_not(true,arg)
     } else if(arg.value.match(reg)[0]!==arg.value.match(reg).input){
         +arg.value.match(reg).input[0]
-        ? error.innerHTML = `<h3>Имя не может начинаться с цифры</h3>`
-        : error.innerHTML = `<h3>Используйте En язык </h3>`
+        ? error.innerHTML = `<h3>Name cannot start with a number</h3>`
+        : error.innerHTML = `<h3>Use English </h3>`
        return error_or_not(true,arg)
     } else if(arg.value.length>9){
-        error.innerHTML = `<h3>Имя слишком длинное</h3>`
+        error.innerHTML = `<h3>Name is too long</h3>`
         return  error_or_not(true,arg)
     } else{
          return error_or_not(false,arg)
