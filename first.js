@@ -117,4 +117,4 @@ function error_or_not (isBool,arg){
     }
 }
 
-console.log(22)
+console.log(99)
